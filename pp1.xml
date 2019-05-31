@@ -1,205 +1,159 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/css" href="pp2.css"?>
+<!DOCTYPE ewidencja SYSTEM "pp3.dtd">
+
 <ewidencja>
 	<wpis>
-		<wprowadzajcy ID_wprowadzajacego="231">
+		<wprowadzajacy ID_wprowadzajacego="231" is_admin="true" is_officeworker="false">
 			<imie>Agnieszka</imie>
 			<nazwisko>Pappe</nazwisko>
 			<pesel>98112900000</pesel>
 			<data_urodzenia>29-11-1998</data_urodzenia>
-			<is_admin>false</is_admin>
-			<is_officeworker>false</is_officeworker>
-		</wprowadzajcy>
+		</wprowadzajacy>
 		<pracownik ID_pracownika = "231" plec="k">
 			<imie>Agnieszka</imie>
 			<nazwisko>Pappe</nazwisko>
 			<pesel>981129000000</pesel>
 			<data_urodzenia>29-11-1998</data_urodzenia>
 		</pracownik>
-		<podtyp_aktywnosci podtyp="nazwajakas">
-			<typ>praca w biurze</typ>
-		</podtyp_aktywnosci>
+		<typ_aktywnosci typ="1">
+			<aktywnosc>praca w biurze</aktywnosc>
+		</typ_aktywnosci>
 		<projekt ID_projektu="043">
-			<nazwa_projektu></nazwa_projektu>
-			<czas_trwania_projektu></czas_trwania_projektu>
+			<nazwa_projektu>Projekt X</nazwa_projektu>
+		</projekt>
+		<projekt ID_projektu="111">
+			<nazwa_projektu>Projekt Y</nazwa_projektu>
 		</projekt>
 		<data>05-29-2019</data>
 		<czas_trwania>8:00:00</czas_trwania>
 	</wpis>
 	
 	<wpis>
-		<wprowadzajcy ID_wprowadzajacego="190">
+		<wprowadzajacy ID_wprowadzajacego="190" is_admin="false" is_officeworker="true">
 			<imie>Sara</imie>
 			<nazwisko>Pappe</nazwisko>
 			<pesel>87890239012</pesel>
 			<data_urodzenia>03-03-1993</data_urodzenia>
-			<is_admin>false</is_admin>
-			<is_officeworker>true</is_officeworker>
-		</wprowadzajcy>
+		</wprowadzajacy>
 		<pracownik ID_pracownika="190" plec="k">
 			<imie>Sara</imie>
 			<nazwisko>Pappe</nazwisko>
 			<pesel>87890239012</pesel>
 			<data_urodzenia>03-03-1993</data_urodzenia>
 		</pracownik>
-		<podtyp_aktywnosci podtyp="nazwajakas">
-			<typ>praca zdalna</typ>
-		</podtyp_aktywnosci>
+		<typ_aktywnosci typ="2">
+			<aktywnosc>praca zdalna</aktywnosc>
+		</typ_aktywnosci>
+		<projekt ID_projektu="111">
+			<nazwa_projektu>Projekt Y</nazwa_projektu>
+		</projekt>
 		<data>05-29-2019</data>
 		<czas_trwania>7:50:45</czas_trwania>
 	</wpis>
 	
 	<wpis>
-		<wprowadzajcy ID_wprowadzajacego="190">
+		<wprowadzajacy ID_wprowadzajacego="190" is_admin="false" is_officeworker="true">
 			<imie>Sara</imie>
 			<nazwisko>Pappe</nazwisko>
 			<pesel>87890239012</pesel>
 			<data_urodzenia>03-03-1993</data_urodzenia>
-			<is_admin>false</is_admin>
-			<is_officeworker>true</is_officeworker>
-		</wprowadzajcy>
-		<pracownik ID_pracownika="190" plec="k">
-			<imie>Sara</imie>
-			<nazwisko>Pappe</nazwisko>
-			<pesel>87890239012</pesel>
-			<data_urodzenia>03-03-1993</data_urodzenia>
+		</wprowadzajacy>
+		<pracownik ID_pracownika="133" plec="m">
+			<imie>Kamil</imie>
+			<nazwisko>Burak</nazwisko>
+			<pesel>45678902435</pesel>
+			<data_urodzenia>19-12-1990</data_urodzenia>
 		</pracownik>
-		<podtyp_aktywnosci podtyp="nazwajakas">
-			<typ>praca zdalna</typ>
-		</podtyp_aktywnosci>
+		<typ_aktywnosci typ="0">
+			<aktywnosc>Urlop wypoczynkowy</aktywnosc>
+		</typ_aktywnosci>
 		<data>05-29-2019</data>
-		<czas_trwania>7:50:45</czas_trwania>
+		<czas_trwania></czas_trwania>
 	</wpis>
 	
 	<wpis>
-		<wprowadzajcy ID_wprowadzajacego="190">
+		<wprowadzajacy ID_wprowadzajacego="190" is_admin="false" is_officeworker="true">
 			<imie>Sara</imie>
 			<nazwisko>Pappe</nazwisko>
 			<pesel>87890239012</pesel>
 			<data_urodzenia>03-03-1993</data_urodzenia>
-			<is_admin>false</is_admin>
-			<is_officeworker>true</is_officeworker>
-		</wprowadzajcy>
-		<pracownik ID_pracownika="190" plec="k">
-			<imie>Sara</imie>
-			<nazwisko>Pappe</nazwisko>
-			<pesel>87890239012</pesel>
-			<data_urodzenia>03-03-1993</data_urodzenia>
+		</wprowadzajacy>
+		<pracownik ID_pracownika="098" plec="k">
+			<imie>Natalia</imie>
+			<nazwisko>Króliczek</nazwisko>
+			<pesel>56990192000</pesel>
+			<data_urodzenia>16-12-1996</data_urodzenia>
 		</pracownik>
-		<podtyp_aktywnosci podtyp="nazwajakas">
-			<typ>praca zdalna</typ>
-		</podtyp_aktywnosci>
+		<typ_aktywnosci typ="3">
+			<aktywnosc>Delegacja</aktywnosc>
+			<szczegoly>Biuro w Oslo</szczegoly>
+		</typ_aktywnosci>
+		<projekt ID_projektu="043">
+			<nazwa_projektu>Oprogramowanie sprzętu ISS</nazwa_projektu>
+		</projekt>
 		<data>05-29-2019</data>
-		<czas_trwania>7:50:45</czas_trwania>
+		<czas_trwania>9:02:11</czas_trwania>
 	</wpis>
 	
 	<wpis>
-		<wprowadzajcy ID_wprowadzajacego="190">
-			<imie>Sara</imie>
-			<nazwisko>Pappe</nazwisko>
-			<pesel>87890239012</pesel>
-			<data_urodzenia>03-03-1993</data_urodzenia>
-			<is_admin>false</is_admin>
-			<is_officeworker>true</is_officeworker>
-		</wprowadzajcy>
-		<pracownik ID_pracownika="190" plec="k">
-			<imie>Sara</imie>
-			<nazwisko>Pappe</nazwisko>
-			<pesel>87890239012</pesel>
-			<data_urodzenia>03-03-1993</data_urodzenia>
+		<wprowadzajacy ID_wprowadzajacego="115" is_admin="false" is_officeworker="false">
+			<imie>Michał</imie>
+			<nazwisko>Rumun</nazwisko>
+			<pesel>56765552019</pesel>
+			<data_urodzenia>14-05-1980</data_urodzenia>
+		</wprowadzajacy>
+		<pracownik ID_pracownika="115" plec="m">
+			<imie>Michał</imie>
+			<nazwisko>Rumun</nazwisko>
+			<pesel>56765552019</pesel>
+			<data_urodzenia>14-05-1980</data_urodzenia>
 		</pracownik>
-		<podtyp_aktywnosci podtyp="nazwajakas">
-			<typ>praca zdalna</typ>
-		</podtyp_aktywnosci>
+		<typ_aktywnosci typ="4">
+			<aktywnosc>Outsourcing</aktywnosc>
+			<szczegoly>Space Forest</szczegoly>
+		</typ_aktywnosci>
 		<data>05-29-2019</data>
-		<czas_trwania>7:50:45</czas_trwania>
+		<czas_trwania>8:12:18</czas_trwania>
 	</wpis>
 	
 	<wpis>
-		<wprowadzajcy ID_wprowadzajacego="190">
+		<wprowadzajacy ID_wprowadzajacego="190" is_admin="false" is_officeworker="true">
 			<imie>Sara</imie>
 			<nazwisko>Pappe</nazwisko>
 			<pesel>87890239012</pesel>
 			<data_urodzenia>03-03-1993</data_urodzenia>
-			<is_admin>false</is_admin>
-			<is_officeworker>true</is_officeworker>
-		</wprowadzajcy>
-		<pracownik ID_pracownika="190" plec="k">
-			<imie>Sara</imie>
-			<nazwisko>Pappe</nazwisko>
-			<pesel>87890239012</pesel>
-			<data_urodzenia>03-03-1993</data_urodzenia>
+		</wprowadzajacy>
+		<pracownik ID_pracownika="190" plec="m">
+			<imie>Sebastian</imie>
+			<nazwisko>Kowalski</nazwisko>
+			<pesel>45787888901</pesel>
+			<data_urodzenia>22-10-1985</data_urodzenia>
 		</pracownik>
-		<podtyp_aktywnosci podtyp="nazwajakas">
-			<typ>praca zdalna</typ>
-		</podtyp_aktywnosci>
+		<typ_aktywnosci typ="5">
+			<aktywnosc>Zwolnienie lekarskie</aktywnosc>
+		</typ_aktywnosci>
 		<data>05-29-2019</data>
-		<czas_trwania>7:50:45</czas_trwania>
+		<czas_trwania></czas_trwania>
 	</wpis>
 	
 	<wpis>
-		<wprowadzajcy ID_wprowadzajacego="190">
-			<imie>Sara</imie>
-			<nazwisko>Pappe</nazwisko>
-			<pesel>87890239012</pesel>
-			<data_urodzenia>03-03-1993</data_urodzenia>
-			<is_admin>false</is_admin>
-			<is_officeworker>true</is_officeworker>
-		</wprowadzajcy>
-		<pracownik ID_pracownika="190" plec="k">
-			<imie>Sara</imie>
-			<nazwisko>Pappe</nazwisko>
-			<pesel>87890239012</pesel>
-			<data_urodzenia>03-03-1993</data_urodzenia>
+		<wprowadzajacy ID_wprowadzajacego="088" is_admin="false" is_officeworker="false">
+			<imie>Krystian</imie>
+			<nazwisko>Wróbel</nazwisko>
+			<pesel>50900012321</pesel>
+			<data_urodzenia>12-07-1988</data_urodzenia>
+		</wprowadzajacy>
+		<pracownik ID_pracownika="088" plec="m">
+			<imie>Krystian</imie>
+			<nazwisko>Wróbel</nazwisko>
+			<pesel>50900012321</pesel>
+			<data_urodzenia>12-07-1988</data_urodzenia>
 		</pracownik>
-		<podtyp_aktywnosci podtyp="nazwajakas">
-			<typ>praca zdalna</typ>
-		</podtyp_aktywnosci>
+		<typ_aktywnosci typ="1">
+			<aktywnosc>Praca w biurze</aktywnosc>
+		</typ_aktywnosci>
 		<data>05-29-2019</data>
-		<czas_trwania>7:50:45</czas_trwania>
-	</wpis>
-	
-	<wpis>
-		<wprowadzajcy ID_wprowadzajacego="190">
-			<imie>Sara</imie>
-			<nazwisko>Pappe</nazwisko>
-			<pesel>87890239012</pesel>
-			<data_urodzenia>03-03-1993</data_urodzenia>
-			<is_admin>false</is_admin>
-			<is_officeworker>true</is_officeworker>
-		</wprowadzajcy>
-		<pracownik ID_pracownika="190" plec="k">
-			<imie>Sara</imie>
-			<nazwisko>Pappe</nazwisko>
-			<pesel>87890239012</pesel>
-			<data_urodzenia>03-03-1993</data_urodzenia>
-		</pracownik>
-		<podtyp_aktywnosci podtyp="nazwajakas">
-			<typ>praca zdalna</typ>
-		</podtyp_aktywnosci>
-		<data>05-29-2019</data>
-		<czas_trwania>7:50:45</czas_trwania>
-	</wpis>
-	
-	<wpis>
-		<wprowadzajcy ID_wprowadzajacego="190">
-			<imie>Sara</imie>
-			<nazwisko>Pappe</nazwisko>
-			<pesel>87890239012</pesel>
-			<data_urodzenia>03-03-1993</data_urodzenia>
-			<is_admin>false</is_admin>
-			<is_officeworker>true</is_officeworker>
-		</wprowadzajcy>
-		<pracownik ID_pracownika="190" plec="k">
-			<imie>Sara</imie>
-			<nazwisko>Pappe</nazwisko>
-			<pesel>87890239012</pesel>
-			<data_urodzenia>03-03-1993</data_urodzenia>
-		</pracownik>
-		<podtyp_aktywnosci podtyp="nazwajakas">
-			<typ>praca zdalna</typ>
-		</podtyp_aktywnosci>
-		<data>05-29-2019</data>
-		<czas_trwania>7:50:45</czas_trwania>
+		<czas_trwania>8:30:41</czas_trwania>
 	</wpis>
 </ewidencja>

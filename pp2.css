@@ -11,8 +11,6 @@ ewidencja:before {
 	text-shadow: 0 0 5px #000000;
 	content: url(logo.png) "\A Ewidencja firmowa - wpisy";
 	white-space: pre;
-	margin-left: 20px;
-  margin-right: 20px;
 }
 
 ewidencja {
@@ -28,6 +26,13 @@ ewidencja {
 	font-variant: small-caps;
 	text-align: center;
 	letter-spacing: 2px;
+	counter-reset: section;
+}
+
+wpis::before {
+  counter-increment: section;
+  content: "#" counter(section) "\A";
+  white-space: pre;
 }
 
 wpis {
@@ -51,23 +56,100 @@ wpis:hover {
 	border-color: #FFFFFF;
 }
 
+wpis:hover typ_aktywnosci {
+	text-shadow: 0 0 2px #000000;
+}
+
+wpis:hover data {
+	text-decoration: underline;
+}
+
+wprowadzajacy:before {
+	content: "Wprowadzający: ";
+}
+
 wprowadzajacy {
 	display: block;
 }
 
+pracownik:before {
+	content: "Pracownik: ";
+}
+
 pracownik {
+	border-bottom: 1px solid;
+    border-image-source: linear-gradient(45deg, transparent, white, transparent);
+    border-image-slice: 1;
+	font-size: 20px;
 	display: block;
 }
 
-pesel, data_urodzenia {
+pesel, data_urodzenia, is_admin, is_officeworker {
 	display: none;
 }
 
-podtyp_aktywnosci {
+typ_aktywnosci {
 	display: block;
 	text-transform: lowercase;
 }
 
+typ_aktywnosci[typ="0"]:before {
+	text-align: center;
+	content: url(urlop.png);
+}
+
+typ_aktywnosci[typ="1"]:before {
+	text-align: center;
+	content: url(biuro.png);
+}
+
+typ_aktywnosci[typ="2"]:before {
+	text-align: center;
+	content: url(zdalna.png);
+}
+
+typ_aktywnosci[typ="3"]:before {
+	text-align: center;
+	content: url(sluzbowa.png);
+}
+
+typ_aktywnosci[typ="4"]:before {
+	text-align: center;
+	content: url(outsource.png);
+}
+
+typ_aktywnosci[typ="5"]:before {
+	text-align: center;
+	content: url(l4.png);
+}
+
+[typ*="0"] {
+	color: RGB(13, 168, 26);
+}
+
+[typ*="5"] {
+	color: RGB(188, 0, 15);
+}
+
+szczegoly:before {
+	content: " - ";
+}
+
+szczegoly {
+	font-size: 12px;
+}
+
+nazwa_projektu {
+	text-transform: lowercase;
+	font-size: 12px;
+	font-style: italic;
+}
+
+nazwa_projektu:after {
+	content: ";";
+}
+
 data {
+	font-weight: bold;
 	display: block;
 }
