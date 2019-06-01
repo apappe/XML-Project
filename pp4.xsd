@@ -1,0 +1,175 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<xsd:simpleType name="typ_plec">
+	<xsd:restriction base="xsd:string">
+		<xsd:enumeration value="k"/>
+		<xsd:enumeration value="m"/>
+	</xsd:restriction>
+</xsd:simpleType>
+
+
+<xsd:element name="ewidencja">
+<xsd:complexType><xsd:sequence>
+	<xsd:element name="wpis">
+	<xsd:complexType><xsd:sequence>
+				<xsd:element name="wprowadzajacy" minOccurs="1" maxOccurs="1">
+				<xsd:complexType><xsd:sequence>
+					<xsd:element name="imie">
+					<xsd:simpleType><xsd:restriction base="xsd:string">
+						<xsd:minLength value="3"/>
+						<xsd:maxLength value="20"/>
+					</xsd:restriction></xsd:simpleType>
+					</xsd:element>
+					<xsd:element name="nazwisko">
+					<xsd:simpleType><xsd:restriction base="xsd:string">
+						<xsd:minLength value="3"/>
+						<xsd:maxLength value="25"/>
+					</xsd:restriction></xsd:simpleType>
+					</xsd:element>
+					<xsd:element name="pesel">
+					<xsd:simpleType><xsd:restriction base="xsd:string">
+						<xsd:length value="11"/>
+					</xsd:restriction></xsd:simpleType>
+					</xsd:element>
+					<xsd:element name="data_urodzenia" type="xsd:date"/>
+					</xsd:sequence>
+					<xsd:attribute name="ID_wprowadzajacego" type="xsd:positiveInteger"/>
+					<xsd:attribute name="is_admin" type="xsd:boolean"/>
+					<xsd:attribute name="is_officeworker" type="xsd:boolean"/>
+				</xsd:complexType></xsd:element>
+				
+				<xsd:element name="pracownik" minOccurs="1" maxOccurs="1">
+				<xsd:complexType><xsd:sequence>
+					<xsd:element name="imie">
+					<xsd:simpleType><xsd:restriction base="xsd:string">
+						<xsd:minLength value="3"/>
+						<xsd:maxLength value="20"/>
+					</xsd:restriction></xsd:simpleType>
+					</xsd:element>
+					<xsd:element name="nazwisko">
+					<xsd:simpleType><xsd:restriction base="xsd:string">
+						<xsd:minLength value="3"/>
+						<xsd:maxLength value="25"/>
+					</xsd:restriction></xsd:simpleType>
+					</xsd:element>
+					<xsd:element name="pesel">
+					<xsd:simpleType><xsd:restriction base="xsd:string">
+						<xsd:length value="11"/>
+					</xsd:restriction></xsd:simpleType>
+					</xsd:element>
+					<xsd:element name="data_urodzenia" type="xsd:date"/>
+				</xsd:sequence>
+					<xsd:attribute name="ID_pracownika" type="xsd:positiveInteger"/>
+					<xsd:attribute name="plec" type="typ_plec"/>
+				</xsd:complexType></xsd:element>
+				
+				<xsd:choice>
+					<xsd:sequence>
+						<xsd:element name="typ_aktywnosci" minOccurs="1" maxOccurs="1">
+						<xsd:complexType><xsd:sequence>
+							<xsd:element name="aktywnosc">
+							<xsd:simpleType><xsd:restriction base="xsd:string">
+								<xsd:enumeration value="Urlop wypoczynkowy"/>
+							</xsd:restriction></xsd:simpleType></xsd:element>
+						</xsd:sequence>
+						<xsd:attribute name="typ" type="xsd:nonNegativeInteger" fixed="0"/>
+						</xsd:complexType></xsd:element>
+						<xsd:element name="data" type="xsd:date"/>
+					</xsd:sequence>
+				
+					<xsd:sequence>
+						<xsd:element name="typ_aktywnosci" minOccurs="1" maxOccurs="1">
+						<xsd:complexType><xsd:sequence>
+							<xsd:element name="aktywnosc">
+							<xsd:simpleType><xsd:restriction base="xsd:string">
+								<xsd:enumeration value="Praca w biurze"/>
+							</xsd:restriction></xsd:simpleType>
+							</xsd:element>
+						</xsd:sequence>
+						<xsd:attribute name="typ" type="xsd:positiveInteger" fixed="1"/>
+						</xsd:complexType></xsd:element>
+						<xsd:element name="projekt" minOccurs="0" maxOccurs="5">
+						<xsd:complexType><xsd:sequence>
+							<xsd:element name="nazwa_projektu" type="xsd:string"/>
+						</xsd:sequence>
+						<xsd:attribute name="ID_projektu" type="xsd:integer" use="required"/>
+						</xsd:complexType></xsd:element>
+						<xsd:element name="data" type="xsd:date"/>
+						<xsd:element name="czas_trwania" type="xsd:time"/>
+					</xsd:sequence>
+				
+					<xsd:sequence>
+						<xsd:element name="typ_aktywnosci" minOccurs="1" maxOccurs="1">
+						<xsd:complexType><xsd:sequence>
+							<xsd:element name="aktywnosc">
+							<xsd:simpleType><xsd:restriction base="xsd:string">
+								<xsd:enumeration value="Praca zdalna"/>
+							</xsd:restriction></xsd:simpleType></xsd:element>
+						</xsd:sequence>
+						<xsd:attribute name="typ" type="xsd:positiveInteger" fixed="2"/>
+						</xsd:complexType></xsd:element>
+						<xsd:element name="projekt" minOccurs="0" maxOccurs="5">
+						<xsd:complexType><xsd:sequence>
+							<xsd:element name="nazwa_projektu" type="xsd:string"/>
+						</xsd:sequence>
+						<xsd:attribute name="ID_projektu" type="xsd:positiveInteger" use="required"/>
+						</xsd:complexType></xsd:element>
+						<xsd:element name="data" type="xsd:date"/>
+						<xsd:element name="czas_trwania" type="xsd:time"/>
+					</xsd:sequence>
+				
+					<xsd:sequence>
+						<xsd:element name="typ_aktywnosci" minOccurs="1" maxOccurs="1">
+						<xsd:complexType><xsd:sequence>
+							<xsd:element name="aktywnosc">
+							<xsd:simpleType><xsd:restriction base="xsd:string">
+								<xsd:enumeration value="Delegacja"/>
+							</xsd:restriction></xsd:simpleType></xsd:element>
+						<xsd:element name="szczegoly" type="xsd:string"/>
+						</xsd:sequence>
+						<xsd:attribute name="typ" type="xsd:positiveInteger" fixed="3"/>
+						</xsd:complexType></xsd:element>
+						<xsd:element name="projekt" minOccurs="0" maxOccurs="5">
+						<xsd:complexType><xsd:sequence>
+							<xsd:element name="nazwa_projektu" type="xsd:string"/>
+						</xsd:sequence>
+						<xsd:attribute name="ID_projektu" type="xsd:positiveInteger" use="required"/>
+						</xsd:complexType></xsd:element>
+						<xsd:element name="data" type="xsd:date"/>
+						<xsd:element name="czas_trwania" type="xsd:time"/>
+					</xsd:sequence>
+					
+					<xsd:sequence>
+						<xsd:element name="typ_aktywnosci" minOccurs="1" maxOccurs="1">
+						<xsd:complexType><xsd:sequence>
+							<xsd:element name="aktywnosc">
+							<xsd:simpleType><xsd:restriction base="xsd:string">
+								<xsd:enumeration value="Outsourcing"/>
+							</xsd:restriction></xsd:simpleType></xsd:element>
+							<xsd:element name="szczegoly" type="xsd:string"/>
+						</xsd:sequence>
+							<xsd:attribute name="typ" type="xsd:positiveInteger" fixed="4"/>
+						</xsd:complexType></xsd:element>
+						<xsd:element name="data" type="xsd:date"/>
+						<xsd:element name="czas_trwania" type="xsd:time"/>
+					</xsd:sequence>
+                  
+					<xsd:sequence>
+						<xsd:element name="typ_aktywnosci" minOccurs="1" maxOccurs="1">
+						<xsd:complexType><xsd:sequence>
+							<xsd:element name="aktywnosc">
+							<xsd:simpleType><xsd:restriction base="xsd:string">
+								<xsd:enumeration value="Zwolnienie lekarskie"/>
+							</xsd:restriction></xsd:simpleType></xsd:element>
+							</xsd:sequence>
+							<xsd:attribute name="typ" type="xsd:positiveInteger" fixed="5"/>
+						</xsd:complexType></xsd:element>
+						<xsd:element name="data" type="xsd:date"/>
+					</xsd:sequence>
+					
+				</xsd:choice>
+		
+	</xsd:sequence></xsd:complexType></xsd:element>
+</xsd:sequence></xsd:complexType></xsd:element>
+
+</xsd:schema>
