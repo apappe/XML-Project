@@ -2,13 +2,13 @@
   <v-card
       v-for="event in events"
       :key="event.id"
-      class="ma-2 rounded-xl"
+      class="event-tile ma-2 rounded-xl"
       variant="flat"
       color="secondary"
       width="350"
       hover>
     <div class="d-flex flex-row align-end justify-space-between pa-4 ga-2">
-      <p>{{ event.date }}</p>
+      <p class="font-weight-bold">{{ event.date }}</p>
       <div>
         <p>{{ event.title }}</p>
         <p>{{ event.location }}</p>
@@ -20,9 +20,11 @@
         <v-btn
           color="accent"
           variant="outlined"
+          size="small"
+          density="comfortable"
           icon>
           <v-icon color="accent">
-            mdi-arrow-right-thick
+            mdi-arrow-right
           </v-icon>
         </v-btn>
       </v-card-actions>
@@ -63,4 +65,14 @@ const events = [
 </script>
 
 <style lang="css" scoped>
+.event-tile {
+  border: 1px solid rgb(var(--v-theme-primary));
+  box-shadow: 0px 0px 0px rgb(var(--v-theme-primary));
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+
+  &:hover {
+    border-color: rgb(var(--v-theme-accent));
+    box-shadow: 0px 0px 4px rgb(var(--v-theme-accent));
+  }
+}
 </style>
