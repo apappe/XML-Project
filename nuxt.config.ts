@@ -2,6 +2,10 @@
 import vuetify from 'vite-plugin-vuetify';
 
 export default defineNuxtConfig({
+  app: {
+    baseURL: process.env.NUXT_APP_BASE_URL || '/',
+  },
+
   modules: [
     '@nuxt/content',
     '@nuxtjs/tailwindcss',
